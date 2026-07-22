@@ -6,3 +6,4 @@ maki.setup({
 })
 
 -- require("semble")
+require("doom")
