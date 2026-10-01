@@ -18,3 +18,4 @@ maki.keymap.set("n", "<C-y>", function()
 end, { desc = "Scroll up one line" })
 
 -- require("semble")
+-- require("jev").setup()
