@@ -55,7 +55,7 @@ function M.ask(state, questions, opts)
   if res and res.status ~= HTTP_OK then
     err = "http " .. tostring(res.status) .. ": " .. res.body:sub(1, 200)
   end
-  local decoded = not err and maki.json.decode(res.body)
+  local decoded = not err and maki.json.decode(res.body, { luanil = { object = true, array = true } })
   local answers = decoded and decoded.answers
   if not answers then
     stats.errors = stats.errors + 1

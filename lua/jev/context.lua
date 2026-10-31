@@ -51,7 +51,7 @@ local function blocks_text(msg, kind)
 end
 
 local function is_user_turn(msg)
-  return msg.role == "user" and msg.kind == "turn" and not msg.hidden and blocks_text(msg, "text") ~= ""
+  return msg.role == "user" and msg.kind == "turn" and not msg.hidden and msg.display_text ~= "" and blocks_text(msg, "text") ~= ""
 end
 
 local function render(list)
