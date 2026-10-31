@@ -9,11 +9,11 @@ maki.setup({
 
 local scroll = require("maki.scroll")
 
-maki.keymap.set("n", "<C-e>", function()
+maki.keymap.set({"i", "n"}, "<C-e>", function()
   scroll(1)
 end, { desc = "Scroll down one line" })
 
-maki.keymap.set("n", "<C-y>", function()
+maki.keymap.set({"i", "n"}, "<C-y>", function()
   scroll(-1)
 end, { desc = "Scroll up one line" })
 
